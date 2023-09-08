@@ -1,0 +1,450 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #0f1b4c;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Common:  dùng chung  */
+a {
+  text-decoration: none;
+}
+
+.content {
+  width: 1110px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 18px 16px;
+  min-width: 98px;
+  background: var(--primary-color);
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 2);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* ============================== Header ===========================*/
+.header {
+  position: relative;
+  background-color: #e6f0ff;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 38px;
+}
+
+.navbar ul {
+  display: flex;
+  margin-left: 50px;
+}
+
+.navbar ul a {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #4f5361;
+  padding: 8px 14px;
+}
+
+.navbar ul a:hover {
+  text-decoration: underline;
+}
+
+.navbar .actions {
+  margin-left: auto;
+}
+
+.navbar .action-link {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.navbar .action-btn {
+  padding: 13px 16px;
+  margin-left: 18px;
+  border-radius: 8px;
+}
+
+.hero {
+  margin-top: 100px;
+}
+
+.hero .info {
+  width: 51%; /* theo như số đo ban đầu là nguyên cái khung này là 559
+   nhưng nó nằm trong một cái containe là header nên nó phải chia ra cho đúng tỉ lệ là lấy 559 / 1110(là chiều rộng của container) = x
+   sau đó sẽ lấy x * 100 = ra được số cần tìm*/
+}
+
+.hero .sub-title {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.5; /* 27px(so ban dau de cho) / 18 = 1.5. CT: so line heigth / font-size = kq */
+  letter-spacing: 0.01em; /* khoang cach giua cach chu */
+  color: #687690;
+}
+
+.hero .title {
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 6.4rem;
+  line-height: 76px;
+  /* or 119% */
+  color: #000336;
+}
+
+.hero .desc {
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 32px;
+  /* or 178% */
+  text-transform: capitalize; /* viet hoa cac chu*/
+  color: #5a6473;
+}
+
+.hero-cta {
+  margin-top: 40px;
+  min-width: 170px; /*để min-width cho thích nghi được với mọi thay đổi*/
+}
+
+.hero_img {
+  position: absolute;
+  right: calc((100vw - 1110px) / 2 - 100px);
+  bottom: 0;
+}
+
+/* ================= Clients =================== */
+
+.clients {
+  margin-top: 79px;
+  padding: 43px 64px;
+}
+
+.clients .row {
+  display: flex;
+  justify-content: space-between; /* để cho các phần tử con xa nhau nhất có thể*/
+}
+
+.clients .desc {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  /* identical to box height, or 125% */
+  color: #7d8589;
+}
+
+.clients .row-desc {
+  margin-top: 23px;
+}
+
+.clients .img {
+  margin-top: 96px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* =============== Guides ============== */
+.guides {
+  margin-top: 40px;
+  padding: 93px 0 79px;
+}
+
+.guides .sub-title {
+  position: relative;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1;
+  /* or 100% */
+  text-align: center;
+  color: #000339;
+}
+.guides .sub-title::before {
+  position: absolute;
+  top: -10px;
+  content: "";
+  display: inline-block;
+  width: 41px;
+  height: 4px;
+  border-radius: 12px;
+  background-color: #000339;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.guides .desc {
+  width: 450px;
+  max-width: 100%;
+  margin: 20px auto 0; /* top right left bottom*/
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  /* or 188% */
+  text-align: center;
+  color: #5a6473;
+}
+
+.list-guides {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.guides-item {
+  margin: 0 70px;
+  text-align: center;
+}
+
+.guides .title {
+  margin-top: 26px;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.1;
+  /* identical to box height, or 110% */
+  text-align: center;
+  color: #3b3c45;
+}
+
+.guides-item .link {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #0689ff;
+}
+
+.guides-item .arrow {
+  margin-left: 6px;
+}
+
+.guide-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.guide-cta .btn {
+  /* viết ở đây để không ảnh hưởng tới guide cta khác*/
+  min-width: 170px;
+}
+
+.featured {
+  margin-top: 41px;
+  padding: 110px 0;
+  background-color: #f5fafe;
+}
+
+.featured .title {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1;
+  /* identical to box height, or 100% */
+  color: #000339;
+}
+
+.featured .row {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.featured .desc {
+  font-weight: 400;
+  font-size: 1.6;
+  line-height: 1.88;
+  /* identical to box height, or 188% */
+  color: #5a6473;
+}
+
+.featured .link_feat {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.8;
+  color: #0689ff;
+}
+
+.featured .link_feat .arrow {
+  /* position: relative;
+  top: -2px; */
+  margin-left: 8px;
+}
+
+.featured .list {
+  display: flex;
+  gap: 30px;
+  margin-top: 70px;
+}
+
+.featured .item {
+  /* tổng kích thước của thẻ cha sẽ chia đều cho thẻ con*/
+  flex: 1;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.featured .list .thumb {
+  width: 100%;
+  height: 227px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.featured .item .body {
+  padding: 17px 20px 24px;
+}
+
+.featured .item .title a {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.5;
+  /* identical to box height, or 100% */
+  color: #000339;
+}
+
+.featured .item .desc {
+  margin-top: 11px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  /* identical to box height */
+  color: #a3a6ab;
+  word-break: break-all;
+}
+
+.featured .item .info {
+  margin-top: 21px;
+  display: flex;
+  align-items: center;
+}
+
+.featured .item .icon {
+  margin-left: 23px;
+}
+
+.featured .item .icon:first-child {
+  margin-left: 0;
+}
+
+.featured .item .lable {
+  margin-left: 8px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 0.01em;
+  color: #4d4d52;
+}
+
+/* ================= Stats =================== */
+.stats {
+  margin-top: 75px;
+  padding: 50px 0;
+  background-color: #3b3c45;
+}
+
+.stats .content {
+  width: 1048px;
+}
+
+.stats .row {
+  display: flex;
+}
+
+.stats .img-block,
+.stats .info {
+  width: 50%;
+}
+
+.stats .img-block img {
+  display: block;
+  margin-left: auto;
+  width: 400px;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.stats .info {
+  padding: 79px 0 0 165px;
+}
+
+.stats .info .sub-title {
+  width: 269px;
+  position: relative;
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1.29;
+  color: #000339;
+}
+
+.stats .info .sub-title::before {
+  position: absolute;
+  top: -10px;
+  content: "";
+  display: inline-block;
+  width: 41px;
+  height: 4px;
+  background: #000339;
+  border-radius: 12px;
+}
+
+.stats .info .desc {
+  margin-top: 20px;
+  width: 309px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  color: #5a6473;
+}
+
+.stats .rownum {
+  display: flex;
+  margin-top: 110px;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.stats .rownum .number {
+  font-weight: 600;
+  font-size: 6.4rem;
+  line-height: 1;
+  color: #000000;
+}
+
+.stats .rownum .desc {
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: #7b8087;
+}
